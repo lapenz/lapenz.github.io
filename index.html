@@ -1,67 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WAP Lucas Arthur Penz</title>
-  <link rel="stylesheet" href="default.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+    <title>Bootstrap 4 Portfolio/Resume Theme for Developers</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap 4 Portfolio/Resume Theme for Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    
+    <!-- github calendar css -->
+    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css">
+    <!-- github activity css -->    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <link rel="stylesheet" href="assets/plugins/github-activity/github-activity-0.1.5.min.css">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+</head> 
+
 <body>
-<img id="profile-pic" src="./img/profile.png" alt="profile image"/>
-<h1>Lucas Arthur Penz</h1>
+    <!-- ******HEADER****** --> 
+    <header class="header">
+        <div class="container clearfix">                       
+            <img class="profile-image img-fluid float-left rounded-circle" src="assets/images/profile.png" alt="profile image" />
+            <div class="profile-content float-left">
+                <h1 class="name">Lucas Penz</h1>
+                <h2 class="desc">Full Stack Engineer</h2>
+                <ul class="social list-inline">
+                    <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/lucaspenz/"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="list-inline-item"><a target="_blank" href="https://github.com/lapenz"><i class="fab fa-github-alt"></i></a></li>
+                    <li class="list-inline-item"><a target="_blank" href="https://stackoverflow.com/users/4798167/lucas-arthur-penz"><i class="fab fa-stack-overflow"></i></a></li>
+                </ul>
+            </div><!--//profile-->
+            <a class="btn btn-cta-primary float-right" href="mailto:lucasarthurpenz@gmail.com" target="_blank"><i class="fas fa-paper-plane"></i> Contact Me</a>
+        </div><!--//container-->
+    </header><!--//header-->
+    
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-lg-8 col-12">
+                <section class="about section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">About Me</h2>
+                        <div class="content">
+                            <p>I am a Full Stack Software Engineer with 11 years of overall experience, out of which 8 years of hands-on projects and 2 years of teaching. I have worked with many programming languages, such as Ruby, Java, and PHP. I have worked for different types of businesses, like universities, schools, financial accounting, and e-commerce. I have managed a team of 3 employees following the Agile principles using Scrum. I have a MBA in Project Management and I also was a volunteer at PMI. Moreover, I have worked as a professor at a university teaching about some topics like Ruby, Java and Project Management. I am currently a Master's in Computer Science student. </p>
+                         
+                        </div><!--//content-->
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+    
+               <section class="latest section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Latest Projects</h2>
+                        <div class="content">
 
-<ul>
-  <li><a href="#">Lab 1 - Home page</a></li>
-  <li>Lab 2 - CSS
-    <ul>
-      <li><a href="/wap/w1d2recipe/pie.html">Pie Recipe</a></li>
-      <li><a href="/wap/aboutme">About me</a></li>
-    </ul>
-  </li>
-  <li><a href="/wap/lab3">Lab 3 - TMNT</a></li>
-  <li>Lab 4 - CSS
-    <ul>
-      <li><a href="/wap/lab4/flexbox">Flexbox</a></li>
-      <li><a href="/wap/lab4/grid">Grid</a></li>
-      <li><a href="/wap/lab4/bootstrap">Bootstrap</a></li>
-    </ul>
-  </li>
-  <li>Lab 5 - Form
-	<ul>
-		<li><a href="/wap/lab5/form1.html">Form 1</a></li>
-		<li><a href="/wap/lab5/form2.html">Form 2</a></li>
-	</ul>
-  </li>
-  <li><a href="/wap/lab6">Lab 6 - Basic Javascript</a></li>
-  <li>Lab 7 - Javascript
-    <ul>
-      <li><a href="/wap/lab7/reimplementlab6">Reimplement Lab 6</a></li>
-      <li><a href="/wap/lab7/decoratemytext.html">Decorate My Text</a></li>
-    </ul>
-  </li>
-  <li>Lab 8 - Javascript/MOCHA
-    <ul>
-      <li><a href="/wap/lab8/mocha">Mocha</a></li>
-      <li><a href="/wap/lab8/">ASCIIanimation</a></li>
-    </ul>
-  </li>
-  <li><a href="/wap/lab9">Lab 9 - Javascript</a></li>
-  <li><a href="/wap/lab10">Lab 10 - Javascript - Inheritance</a></li>
-  <li><a href="/wap/lab11">Lab 11 - Javascript - Class</a></li>
-  <li><a href="/wap/lab12">Lab 12 - JQuery - Maze</a></li>
-  <li><a href="/wap/lab13">Lab 13 - JQuery - Circles</a></li>
-  <li><a href="/wap/lab14">Lab 14 - Ajax</a></li>
 
-<footer>
-  <hr/>
-  <a href="https://validator.w3.org/check?uri=referer">
-    <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/>
-  </a>
-  <a href="https://jigsaw.w3.org/css-validator/check/referer">
-    <img style="border:0;width:88px;height:31px"
-         src="https://jigsaw.w3.org/css-validator/images/vcss"
-         alt="Valid CSS!" />
-  </a>
-</footer>
+                            <div class="modal fade project1-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <img  src="assets/images/projects/e-commerce.gif" alt="E-commerce" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item featured text-center">
+                                
+                                <div class="featured-image has-ribbon" data-toggle="modal" data-target=".project1-modal-lg">
+                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/e-commerce.png" alt="E-commerce" />
+
+                                </div>
+
+                                <h3 class="title mb-3">eCommerce Application, MIU (2020): Created e-commerce site in collaboration with one other team member. Stack: Angular, Node.js, Express, MongoDB</h3>
+
+                                <button type="button" class="btn btn-cta-secondary" data-toggle="modal" data-target=".project1-modal-lg">Preview</button>
+                                <a class="btn btn-cta-secondary" href="https://github.com/lapenz/mwa-project" target="_blank"><i class="fab fa-github-alt"></i> Source Code </a>
+                            </div><!--//item-->
+
+
+                            <div class="modal fade project2-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <img  src="assets/images/projects/agendacard.gif" alt="Agendacard" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item featured text-center">
+
+                                <div class="featured-image has-ribbon" data-toggle="modal" data-target=".project2-modal-lg">
+                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/agendacard.png" alt="Agendacard" />
+
+                                </div>
+
+                                <h3 class="title mb-3">AgendaCard (2019): Developed responsive web app to accommodate client-driven appointment scheduling for businesses such as hair salons. Stack: Ruby On Rails, MySQL, Javascript, Bootstrap, AWS, Redis, Sidekiq, Capistrano, MomentJS, Fullcalendar.io.</h3>
+
+                                <button type="button" class="btn btn-cta-secondary" data-toggle="modal" data-target=".project2-modal-lg">Preview</button>
+                                <a class="btn btn-cta-secondary" href="https://github.com/lapenz/calendar" target="_blank"><i class="fab fa-github-alt"></i> Source Code </a>
+                            </div><!--//item-->
+
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                
+                </section><!--//section-->
+                
+
+                
+                <section class="experience section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Professor - <span class="place"><a href="http://portal.utfpr.edu.br">Federal Technological University of Parana</a></span> <span class="year">(2017 - 2019)</span></h3>
+                                <p>Nationally renowned university with 13 campuses.</p>
+                                <ul>
+                                    <li>Planned and delivered IT courses.</li>
+                                    <li>Created hands-on Agile Development course, using Ruby on Rails, GIT/Github, PostgreSQL, Ubuntu, and Bootstrap, resulting in student projects such as classes, blog, and a sales website.</li>
+                                    <li>Taught Project Management Course using PMBOK guidelines to address all 10 areas of PMBOK 5.</li>
+                                    <li>Developed curriculum and delivered Software Development Course, including topics such as quality, testing, and methodologies.</li>
+                                    <li>Educated students in Java Concurrency / Multithreading & Java Socket.</li>
+                                </ul>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Software Development Team Lead - <span class="place"><a href="https://www.germantech.com.br/">German Tech Systems</a></span> <span class="year">(2015 - 2018)</span></h3>
+                                <p>Software company providing business systems support, accounting,
+                                    tax, and stock management.</p>
+                                <ul>
+                                    <li>Introduced improvements to the accounting/taxing software programs.</li>
+                                    <li>Reduced errors by 60% implementing changes to development/testing processes, including more efficient code review and internal communication procedures, such as compiling performance reporting from task management software presented to Company President.</li>
+                                    <li>Led meetings with Product Owner and Development Team.</li>
+                                    <li>Created courses on error handling, debugging, and clean code for
+                                    team members, reducing 50% of bugs.</li>
+                                    <li>Improved response time by 50% based on skillful management of PostgreSQL database, adjusting memory and buffer parameters.</li>
+                                    <li>Managed Nginx application and servers on Amazon  EC2, S3 .</li>
+                                    <li>Contributed to renovation of company’s data center, installing and configuring VMware in new server machines and network devices.</li>
+                                </ul>
+                            </div><!--//item-->
+                            
+                            <div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a href="https://www.germantech.com.br/">German Tech Systems</a></span> <span class="year">(2014 - 2016)</span></h3>
+                                <ul>
+                                    <li>Optimized tax and accounting software for greater efficiency.</li>
+                                    <li>Reduced required man-hours by 20 hours per week, developing new module to download / import documents from government website through SOAP Web-service.</li>
+                                    <li>Reduced ram memory requirements of tax calculation process (from 1.2GB to 200MB  by expertly applying pipe processing model.</li>
+                                    <li>Enhanced system-user interface by reorganizing menus and providing additional feedback messages such as progress bars and error messages.</li>
+                                </ul>
+                            </div><!--//item-->
+
+                            <div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a href="https://www.oderco.com.br">Oderco</a></span> <span class="year">(2014)</span></h3>
+                                <p>Computer equipment / electronics distributor.</p>
+                                <ul>
+                                    <li>Maximized security, permissions, maintenance, and performance by upgrading all internal support tools in conventional development model in PHP by CakePHP 1.3 framework, as well as Front-end Bootstrap 2.3.2 and jQuery that improved interface and usability in addition to maintenance and performance.</li>
+                                </ul>
+                            </div><!--//item-->
+
+                            <div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a href="https://www.fag.edu.br/toledo">Assis Gurgacz Foundation</a></span> <span class="year">(2009 - 2012)</span></h3>
+                                <p>Institute of higher learning with 2,000 students.</p>
+                                <ul>
+                                    <li>Built, maintained, and updated website for the institution.</li>
+                                    <li>Created PHP software programs, such as Reserving, Event Controlling, and Evaluation Systems.</li>
+                                    <li>Developed multiple operations, using Debian, MySQL, Apache, and Postfix.</li>
+                                </ul>
+
+                            </div><!--//item-->
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                <section class="github section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">My GitHub</h2>
+
+                        <div id="github-graph" class="github-graph">
+
+                        </div><!--//github-graph-->
+
+                        <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->
+                        <div id="ghfeed" class="ghfeed">
+                        </div><!--//ghfeed-->
+                        
+                    </div><!--//secton-inner-->
+                </section><!--//section-->
+            </div><!--//primary-->
+            <div class="secondary col-lg-4 col-12">
+                 <aside class="info aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading sr-only">Basic Information</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Iowa, US</li>
+                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="mailto:lucasarthurpenz@gmail.com">lucasarthurpenz@gmail.com</a></li>
+<!--                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="#">https://www.website.com</a></li>-->
+                            </ul>
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//aside-->
+                
+                <aside class="skills aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Skills</h2>
+                        <div class="content">
+                            <p class="intro">
+
+                            <div class="skillset">
+                               
+                                <div class="item">
+                                    <h3 class="level-title">Ruby On Rails</h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="96%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">Javascript &amp; jQuery</h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="96%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">HTML5, CSS3, SASS &amp; LESS</h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="96%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">Java</h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="96%">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">PostgreSQL</h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="96%">
+                                        </div>
+                                    </div><!--//level-bar-->
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">Angular</h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="46%">
+                                        </div>
+                                    </div><!--//level-bar-->
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">MongoDB</h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="46%">
+                                        </div>
+                                    </div><!--//level-bar-->
+                                </div><!--//item-->
+                                
+                                <p><a class="more-link" href="https://www.linkedin.com/in/lucaspenz/"><i class="fas fa-external-link-alt"></i>More on LinkedIn</a></p>
+                            </div>              
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//section-->
+                
+<!--                <aside class="testimonials aside section">-->
+<!--                    <div class="section-inner shadow-sm rounded">-->
+<!--                        <h2 class="heading">Testimonials</h2>-->
+<!--                        <div class="content">-->
+<!--                            <div class="item">-->
+<!--                                <blockquote class="quote">                                  -->
+<!--                                    <p><i class="fas fa-quote-left"></i>James is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!</p>-->
+<!--                                </blockquote>                -->
+<!--                                <p class="source"><span class="name">Tim Adams</span><br /><span class="title">Curabitur commodo</span></p>                                                             -->
+<!--                            </div>&lt;!&ndash;//item&ndash;&gt;-->
+<!--                            -->
+<!--                            <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on Linkedin</a></p> -->
+<!--                            -->
+<!--                        </div>&lt;!&ndash;//content&ndash;&gt;-->
+<!--                    </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
+<!--                </aside>&lt;!&ndash;//section&ndash;&gt;-->
+                
+                <aside class="education aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Education</h2>
+                        <div class="content">
+                            <div class="item">                      
+                                <h3 class="title"><i class="fas fa-graduation-cap"></i> MSc Computer Science</h3>
+                                <h4 class="university">Maharishi International University <span class="year">(2020-2022)</span></h4>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title"><i class="fas fa-graduation-cap"></i> MBA in Project Management</h3>
+                                <h4 class="university">Getulho Vargas Foundation<span class="year">(2015-2016)</span></h4>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title"><i class="fas fa-graduation-cap"></i> BSc Information Systems</h3>
+                                <h4 class="university">Assis Gurgacz Foundation<span class="year">(2008-2011)</span></h4>
+                            </div><!--//item-->
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                            
+                <aside class="languages aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Languages</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li class="item">
+                                    <span class="title"><strong>English:</strong></span>
+                                    <span class="level">Full Professional Proficiency <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                                </li><!--//item-->
+                                <li class="item">
+                                    <span class="title"><strong>Portuguese:</strong></span>
+                                    <span class="level">Native Speaker <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                                </li><!--//item-->
+                                <li class="item">
+                                    <span class="title"><strong>Spanish:</strong></span>
+                                    <span class="level">Limited Working Proficiency <br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                                </li><!--//item-->
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+<!--                <aside class="blog aside section">-->
+<!--                    <div class="section-inner shadow-sm rounded">-->
+<!--                        <h2 class="heading">Latest Blog Posts</h2>-->
+<!--                        <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">jQuery RSS plugin</a> to pull in your blog post feeds.</p>-->
+<!--                        <div id="rss-feeds" class="content">-->
+
+<!--                        </div>&lt;!&ndash;//content&ndash;&gt;-->
+<!--                    </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
+<!--                </aside>&lt;!&ndash;//section&ndash;&gt;-->
+
+
+                
+
+              
+            </div><!--//secondary-->    
+        </div><!--//row-->
+    </div><!--//masonry-->
+    
+
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/popper.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
+    <!-- github calendar plugin -->
+    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
+    <!-- github activity plugin -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>            
 </body>
-</html>
+</html> 
+
