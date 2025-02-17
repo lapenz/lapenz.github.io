@@ -27,435 +27,490 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
     <link rel="stylesheet" href="assets/plugins/github-activity/github-activity-0.1.5.min.css">
     
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- Replace existing CSS with Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head> 
 
-<body>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
     <!-- ******HEADER****** --> 
-    <header class="header">
-        <div class="container clearfix">                       
-            <img class="profile-image img-fluid float-left rounded-circle" src="assets/images/profile.png" alt="profile image" />
-            <div class="profile-content float-left">
-                <h1 class="name">Lucas Penz</h1>
-                <h2 class="desc">Senior Full Stack Engineer</h2>
-                <ul class="social list-inline">
-                    <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/lucaspenz/"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="list-inline-item"><a target="_blank" href="https://github.com/lapenz"><i class="fab fa-github-alt"></i></a></li>
-                    <li class="list-inline-item"><a target="_blank" href="https://stackoverflow.com/users/4798167/lucas-arthur-penz"><i class="fab fa-stack-overflow"></i></a></li>
-                </ul>
-            </div><!--//profile-->
-            <a class="btn btn-cta-primary float-right" href="mailto:lucasarthurpenz@gmail.com" target="_blank"><i class="fas fa-paper-plane"></i> Contact Me</a>
-        </div><!--//container-->
-    </header><!--//header-->
+    <header class="bg-white shadow-lg py-6 mb-8">
+        <div class="container mx-auto px-4 flex items-center justify-between">                       
+            <div class="flex items-center gap-6">
+                <img class="w-24 h-24 rounded-full object-cover shadow-md" 
+                     src="assets/images/profile.png" 
+                     alt="profile image" />
+                <div class="profile-content">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-1">Lucas Penz</h1>
+                    <h2 class="text-xl text-gray-600 mb-3">Senior Full Stack Engineer</h2>
+                    <ul class="flex gap-4">
+                        <li>
+                            <a target="_blank" 
+                               href="https://www.linkedin.com/in/lucaspenz/" 
+                               class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                                <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" 
+                               href="https://github.com/lapenz" 
+                               class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                                <i class="fab fa-github-alt text-lg"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" 
+                               href="https://stackoverflow.com/users/4798167/lucas-arthur-penz" 
+                               class="text-gray-600 hover:text-orange-600 transition-colors duration-300">
+                                <i class="fab fa-stack-overflow text-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="mailto:lucasarthurpenz@gmail.com" 
+               target="_blank" 
+               class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg">
+                <i class="fas fa-paper-plane"></i>
+                <span>Contact Me</span>
+            </a>
+        </div>
+    </header>
     
-    <div class="container sections-wrapper">
-        <div class="row">
-            <div class="primary col-lg-8 col-12">
-                <section class="about section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content">
-                            <p>Strategic Staff Software Engineer with 13+ years of experience bridging
-                                technology and business. A proven track record of delivering scalable, high-
-                                performance solutions for Fortune 500 companies and startups alike. Beyond
-                                coding, I excel in business strategy, project management, and product
-                                development, ensuring technical solutions drive real impact. Deep expertise
-                                in Ruby on Rails, PostgreSQL, and JavaScript, coupled with proficiency in cloud
-                                platforms. Strong in cross-functional collaboration, mentoring, and process
-                                optimization to accelerate delivery and enhance product quality. </p>
-                         
-                        </div><!--//content-->
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-    
-               <section class="latest section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Latest Projects</h2>
-                        <div class="content">
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-8">
+                <!-- About Section -->
+                <section class="mb-8">
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">About Me</h2>
+                            <div class="prose max-w-none text-gray-600">
+                                <p>Strategic Staff Software Engineer with 13+ years of experience bridging
+                                    technology and business. A proven track record of delivering scalable, high-
+                                    performance solutions for Fortune 500 companies and startups alike. Beyond
+                                    coding, I excel in business strategy, project management, and product
+                                    development, ensuring technical solutions drive real impact. Deep expertise
+                                    in Ruby on Rails, PostgreSQL, and JavaScript, coupled with proficiency in cloud
+                                    platforms. Strong in cross-functional collaboration, mentoring, and process
+                                    optimization to accelerate delivery and enhance product quality. </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
+                <!-- Latest Projects Section -->
+                <section class="mb-8">
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Latest Projects</h2>
+                            <div class="space-y-6">
+                                <div class="modal fade project1-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <img  src="assets/images/projects/e-commerce.gif" alt="E-commerce" />
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="modal fade project1-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <img  src="assets/images/projects/e-commerce.gif" alt="E-commerce" />
+                                <div class="item featured text-center">
+                                    <div class="featured-image has-ribbon" data-toggle="modal" data-target=".project1-modal-lg">
+                                        <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/e-commerce.png" alt="E-commerce" />
+                                    </div>
+                                    <h3 class="title mb-3">eCommerce Application, MIU (2020): Created e-commerce site in collaboration with one other team member. Stack: Angular, Node.js, Express, MongoDB</h3>
+                                    <div class="btn-group ">
+                                        <button type="button" class="btn btn-cta-secondary" data-toggle="modal" data-target=".project1-modal-lg"><i class="fas fa-play"></i> Preview</button>
+                                        <a class="btn btn-cta-secondary" href="https://github.com/lapenz/mwa-project" target="_blank"><i class="fab fa-github-alt"></i> Source Code </a>
+                                    </div>
+                                </div><!--//item-->
+
+                                <div class="modal fade project2-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <img  src="assets/images/projects/agendacard.gif" alt="Agendacard" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item featured text-center">
+                                    <div class="featured-image has-ribbon" data-toggle="modal" data-target=".project2-modal-lg">
+                                        <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/agendacard.png" alt="Agendacard" />
+                                    </div>
+                                    <h3 class="title mb-3">AgendaCard (2019): Developed responsive web app to accommodate client-driven appointment scheduling for businesses such as hair salons. Stack: Ruby On Rails, MySQL, Javascript, Bootstrap, AWS, Redis, Sidekiq, Capistrano, MomentJS, Fullcalendar.io.</h3>
+                                    <div class="btn-group ">
+                                        <button type="button" class="btn btn-cta-secondary" data-toggle="modal" data-target=".project2-modal-lg"><i class="fas fa-play"></i> Preview</button>
+                                        <a class="btn btn-cta-secondary" href="https://github.com/lapenz/calendar" target="_blank"><i class="fab fa-github-alt"></i> Source Code </a>
+                                    </div>
+                                </div><!--//item-->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Work Experience Section -->
+                <section class="mb-8">
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Work Experience</h2>
+                            <div class="space-y-6">
+                                <div class="item">
+                                    <h3 class="text-xl font-semibold text-gray-800">Senior Software Engineer - <span class="place"><a target="_blank" href="https://www.apple.com/">Apple via TEKSystems</a></span> <span class="year">(4/2022 - 9/2024)</span></h3>
+                                    <p class="text-gray-600 mt-2">Leading multinational technology company specializing in consumer electronics, software, and online services. In 2021, it generated $365.8 billion in revenue and, as of June 2022, is the world's largest company by market capitalization.</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Improved cross-team collaboration by 25% through a custom requirement-gathering framework.</li>
+                                        <li>Conducted code reviews, mentoring junior developers, and enforcing best
+                                            practices, improving overall code quality and maintainability</li>
+                                        <li>Collaborated with customer support teams to analyze recurring technical
+                                            issues, implementing backend fixes and UI improvements that reduced
+                                            support tickets by 40%</li>
+                                        <li>Spearheaded a high-profile project to enable seamless physical processes
+                                            in warehouses, impacting millions of transactions monthly.</li>
+                                        <li>Integrated third-party APIs to extend application functionality, increasing
+                                            automation and reducing manual workload.</li>
+                                        <li>Monitored application performance using Datadog, identifying and
+                                            resolving bottlenecks before they impacted users.</li>
+                                        <li>Designed and implemented fault-tolerant REST APIs for external
+                                            integrations, achieving 99.99% uptime.</li>
+                                        <li>Reduced SQL query execution times by 100x, leveraging advanced
+                                            database optimization techniques</li>
+                                        <li>Implemented background job priority through Sidekiq</li>
+                                    </ul>
+                                </div>
+
+                                <div class="item">
+                                    <h3 class="text-xl font-semibold text-gray-800">Staff Software Engineer - <span class="place"><a target="_blank" href="https://www.line5.com/">Line 5 LLC</a></span> <span class="year">(7/2021 - 4/2022)</span></h3>
+                                    <p class="text-gray-600 mt-2">Financial company which provides loans for customers to buy their car extended warranty.</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Developed testing processes including communications and task templates which improved efficiency by 30%.</li>
+                                        <li>Led meeting with Product Owner and Development Team.</li>
+                                        <li>Led the development of a new payment page.</li>
+                                        <li>Managed application deploy and servers on Amazon EC2, S3.</li>
+                                        <li>Mentored junior developers, enhancing code quality and team productivity through regular code reviews and collaborative pair programming sessions.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="item">
+                                    <h3 class="text-xl font-semibold text-gray-800">Senior Software Engineer - <span class="place"><a target="_blank" href="https://www.line5.com/">Line 5 LLC</a></span> <span class="year">(11/2020 - 7/2021)</span></h3>
+                                    <p class="text-gray-600 mt-2">Financial company which provides loans for customers to buy their car extended warranty.</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Enhanced direct sales revenue by 25% through the development of self-service software utilizing Vue.js for direct customer transactions.</li>
+                                        <li>Oversaw the entire software development lifecycle, encompassing automated testing and deployment through Heroku.</li>
+                                        <li>Enhanced the performance of several queries, resulting in a significant increase of up to 100 times faster execution time.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="item">
+                                    <h3 class="text-xl font-semibold text-gray-800">Professor - <span class="place"><a target="_blank" href="http://portal.utfpr.edu.br">Federal Technological University of Parana</a></span> <span class="year">(8/2017 - 7/2019)</span></h3>
+                                    <p class="text-gray-600 mt-2">Nationally renowned university with 13 campuses.</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Planned and delivered IT courses.</li>
+                                        <li>Created hands-on Agile Development course, using Ruby on Rails, GIT/Github, PostgreSQL, Ubuntu, and Bootstrap, resulting in student projects such as classes, blog, and a sales website.</li>
+                                        <li>Taught Project Management Course using PMBOK guidelines to address all 10 areas of PMBOK 5.</li>
+                                        <li>Developed curriculum and delivered Software Development Course, including topics such as quality, testing, and methodologies.</li>
+                                        <li>Educated students in Java Concurrency / Multithreading & Java Socket.</li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <h3 class="text-xl font-semibold text-gray-800">Staff Software Engineer - <span class="place"><a target="_blank" href="https://www.germantech.com.br/">German Tech Systems</a></span> <span class="year">(1/2016 - 3/2018)</span></h3>
+                                    <p class="text-gray-600 mt-2">Software company providing business systems support, accounting,
+                                        tax, and stock management.</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Implemented process changes that resulted in a 60% reduction in errors. These changes included more efficient code review and internal communication protocols.</li>
+                                        <li>Led meetings with Product Owner and Development Team.</li>
+                                        <li>Orchestrated a knowledge sharing session with the team to elucidate error handling, debugging techniques, and principles of writing clean code. This initiative resulted in a significant reduction of bugs, with a notable 50% decrease.</li>
+                                        <li>A significant 50% improvement in response time was achieved through effective management of the PostgreSQL database. This was accomplished by optimizing memory and buffer parameters.</li>
+                                        <li>Managed Nginx applications and servers on Amazon Web Services (AWS), including EC2 instances and S3 storage.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="item">
+                                    <h3 class="text-xl font-semibold text-gray-800">Software Engineer - <span class="place"><a target="_blank"  href="https://www.germantech.com.br/">German Tech Systems</a></span> <span class="year">(11/2014 - 12/2015)</span></h3>
+                                    <p class="text-gray-600 mt-2">
+                                        <ul class="list-disc list-inside text-gray-600 mt-2">
+                                            <li>Reduced required man-hours.</li>
+                                            <li>Reduced memory requirements of tax calculation process (from 1.2 GB to 200 MB) by implementing a pipe processing model.</li>
+                                            <li>System-user interface enhancement through menu reorganization and provision of supplementary feedback messages, including progress bars and error messages.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+
+                                <div class="item">
+                                    <h3 class="text-xl font-semibold text-gray-800">Software Engineer - <span class="place"><a target="_blank" href="https://www.oderco.com.br">Oderco</a></span> <span class="year">(4/2014 - 10/2014)</span></h3>
+                                    <p class="text-gray-600 mt-2">Computer equipment / electronics distributor.</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Maximized security, permissions, maintenance, and performance by upgrading all internal support tools in conventional development model in PHP by CakePHP 1.3 framework, as well as Front-end Bootstrap 2.3.2 and jQuery that improved interface and usability in addition to maintenance and performance.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="item">
+                                    <h3 class="text-xl font-semibold text-gray-800">Software Engineer - <span class="place"><a target="_blank" href="https://www.fag.edu.br/toledo">Assis Gurgacz Foundation</a></span> <span class="year">(12/2009 - 2/2012)</span></h3>
+                                    <p class="text-gray-600 mt-2">Institute of higher learning with 2,000 students.</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Built, maintained, and updated website for the institution.</li>
+                                        <li>Created PHP software programs, such as Reserving, Event Controlling, and Evaluation Systems.</li>
+                                        <li>Developed multiple operations, using Debian, MySQL, Apache, and Postfix.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- GitHub Section -->
+                <section class="mb-8">
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">My GitHub</h2>
+                            <div id="github-graph" class="github-graph">
+                            </div><!--//github-graph-->
+
+                            <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->
+                            <div id="ghfeed" class="ghfeed">
+                            </div><!--//ghfeed-->
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-4 space-y-8">
+                <!-- Basic Information Section -->
+                <aside>
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Basic Information</h2>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                    <span class="text-gray-700">Fort Lauderdale, FL, USA</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                    <a href="mailto:lucasarthurpenz@gmail.com" 
+                                       class="text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                                        lucasarthurpenz@gmail.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Skills Section -->
+                <aside>
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Skills</h2>
+                            <div class="space-y-4">
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">Ruby On Rails</h3>
+                                        <span class="text-sm text-blue-600 font-medium">98%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">Javascript & jQuery</h3>
+                                        <span class="text-sm text-blue-600 font-medium">98%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">HTML5, CSS3, SASS & LESS</h3>
+                                        <span class="text-sm text-blue-600 font-medium">98%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">Java</h3>
+                                        <span class="text-sm text-blue-600 font-medium">96%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 96%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">Python</h3>
+                                        <span class="text-sm text-blue-600 font-medium">20%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 20%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">PostgreSQL</h3>
+                                        <span class="text-sm text-blue-600 font-medium">98%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 98%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">Angular</h3>
+                                        <span class="text-sm text-blue-600 font-medium">46%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 46%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">Vue</h3>
+                                        <span class="text-sm text-blue-600 font-medium">90%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">React</h3>
+                                        <span class="text-sm text-blue-600 font-medium">80%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">MongoDB</h3>
+                                        <span class="text-sm text-blue-600 font-medium">46%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 46%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">Node</h3>
+                                        <span class="text-sm text-blue-600 font-medium">50%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h3 class="text-gray-700 font-medium">GO</h3>
+                                        <span class="text-sm text-blue-600 font-medium">10%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 10%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <a href="https://www.linkedin.com/in/lucaspenz/" 
+                                       class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        More on LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                
+                <!-- Education Section -->
+                <aside>
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Education</h2>
+                            <div class="space-y-6">
+                                <div class="item">                      
+                                    <h3 class="flex items-center gap-2 text-lg font-semibold text-gray-800 mb-1">
+                                        <i class="fas fa-graduation-cap text-blue-600"></i>
+                                        MSc Computer Science
+                                    </h3>
+                                    <div class="ml-7">
+                                        <h4 class="text-gray-700">Maharishi International University</h4>
+                                        <span class="text-gray-600 text-sm">(2020-2023)</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="item">
+                                    <h3 class="flex items-center gap-2 text-lg font-semibold text-gray-800 mb-1">
+                                        <i class="fas fa-graduation-cap text-blue-600"></i>
+                                        MBA in Project Management
+                                    </h3>
+                                    <div class="ml-7">
+                                        <h4 class="text-gray-700">Getulho Vargas Foundation</h4>
+                                        <span class="text-gray-600 text-sm">(2015-2016)</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="item">
+                                    <h3 class="flex items-center gap-2 text-lg font-semibold text-gray-800 mb-1">
+                                        <i class="fas fa-graduation-cap text-blue-600"></i>
+                                        BSc Information Systems
+                                    </h3>
+                                    <div class="ml-7">
+                                        <h4 class="text-gray-700">Assis Gurgacz Foundation</h4>
+                                        <span class="text-gray-600 text-sm">(2008-2011)</span>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="item featured text-center">
-                                
-                                <div class="featured-image has-ribbon" data-toggle="modal" data-target=".project1-modal-lg">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/e-commerce.png" alt="E-commerce" />
-
-                                </div>
-
-                                <h3 class="title mb-3">eCommerce Application, MIU (2020): Created e-commerce site in collaboration with one other team member. Stack: Angular, Node.js, Express, MongoDB</h3>
-
-                                <div class="btn-group " >
-                                    <button type="button" class="btn btn-cta-secondary" data-toggle="modal" data-target=".project1-modal-lg"><i class="fas fa-play"></i> Preview</button>
-                                    <a class="btn btn-cta-secondary" href="https://github.com/lapenz/mwa-project" target="_blank"><i class="fab fa-github-alt"></i> Source Code </a>
-                                </div>
-                            </div><!--//item-->
-
-
-                            <div class="modal fade project2-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <img  src="assets/images/projects/agendacard.gif" alt="Agendacard" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item featured text-center">
-
-                                <div class="featured-image has-ribbon" data-toggle="modal" data-target=".project2-modal-lg">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/agendacard.png" alt="Agendacard" />
-
-                                </div>
-
-                                <h3 class="title mb-3">AgendaCard (2019): Developed responsive web app to accommodate client-driven appointment scheduling for businesses such as hair salons. Stack: Ruby On Rails, MySQL, Javascript, Bootstrap, AWS, Redis, Sidekiq, Capistrano, MomentJS, Fullcalendar.io.</h3>
-
-                                <div class="btn-group " >
-                                    <button type="button" class="btn btn-cta-secondary" data-toggle="modal" data-target=".project2-modal-lg"><i class="fas fa-play"></i> Preview</button>
-                                    <a class="btn btn-cta-secondary" href="https://github.com/lapenz/calendar" target="_blank"><i class="fab fa-github-alt"></i> Source Code </a>
-                                </div>
-                            </div><!--//item-->
-
+                        </div>
+                    </div>
+                </aside>
                             
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                
-                </section><!--//section-->
-                
-
-                
-                <section class="experience section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Work Experience</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">Senior Software Engineer - <span class="place"><a target="_blank" href="https://www.apple.com/">Apple via TEKSystems</a></span> <span class="year">(4/2022 - 9/2024)</span></h3>
-                                <p>Leading multinational technology company specializing in consumer electronics, software, and online services. In 2021, it generated $365.8 billion in revenue and, as of June 2022, is the world's largest company by market capitalization.</p>
-                                <ul>
-                                    <li>Improved cross-team collaboration by 25% through a custom requirement-gathering framework.</li>
-                                    <li>Conducted code reviews, mentoring junior developers, and enforcing best
-                                        practices, improving overall code quality and maintainability</li>
-                                    <li>Collaborated with customer support teams to analyze recurring technical
-                                        issues, implementing backend fixes and UI improvements that reduced
-                                        support tickets by 40%</li>
-                                    <li>Spearheaded a high-profile project to enable seamless physical processes
-                                        in warehouses, impacting millions of transactions monthly.</li>
-                                    <li>Integrated third-party APIs to extend application functionality, increasing
-                                        automation and reducing manual workload.</li>
-                                    <li>Monitored application performance using Datadog, identifying and
-                                        resolving bottlenecks before they impacted users.</li>
-                                    <li>Designed and implemented fault-tolerant REST APIs for external
-                                        integrations, achieving 99.99% uptime.</li>
-                                    <li>Reduced SQL query execution times by 100x, leveraging advanced
-                                        database optimization techniques</li>
-                                    <li>Implemented background job priority through Sidekiq</li>
+                <!-- Languages Section -->
+                <aside>
+                    <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Languages</h2>
+                            <div class="content">
+                                <ul class="list-unstyled">
+                                    <li class="item">
+                                        <span class="title"><strong>English:</strong></span>
+                                        <span class="level">Fluent <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                                    </li><!--//item-->
+                                    <li class="item">
+                                        <span class="title"><strong>Portuguese:</strong></span>
+                                        <span class="level">Native Speaker <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                                    </li><!--//item-->
+                                    <li class="item">
+                                        <span class="title"><strong>Spanish:</strong></span>
+                                        <span class="level">Limited Working Proficiency <br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                                    </li><!--//item-->
                                 </ul>
-                            </div><!--//item-->
-
-                            <div class="item">
-                                <h3 class="title">Staff Software Engineer - <span class="place"><a target="_blank" href="https://www.line5.com/">Line 5 LLC</a></span> <span class="year">(7/2021 - 4/2022)</span></h3>
-                                <p>Financial company which provides loans for customers to buy their car extended warranty.</p>
-                                <ul>
-                                    <li>Developed testing processes including communications and task templates which improved efficiency by 30%.</li>
-                                    <li>Led meeting with Product Owner and Development Team.</li>
-                                    <li>Led the development of a new payment page.</li>
-                                    <li>Managed application deploy and servers on Amazon EC2, S3.</li>
-                                    <li>Mentored junior developers, enhancing code quality and team productivity through regular code reviews and collaborative pair programming sessions.</li>
-
-                                </ul>
-                            </div><!--//item-->
-                            
-                            <div class="item">
-                                <h3 class="title">Senior Software Engineer - <span class="place"><a target="_blank" href="https://www.line5.com/">Line 5 LLC</a></span> <span class="year">(11/2020 - 7/2021)</span></h3>
-                                <p>Financial company which provides loans for customers to buy their car extended warranty.</p>
-                                <ul>
-                                    <li>Enhanced direct sales revenue by 25% through the development of self-service software utilizing Vue.js for direct customer transactions.</li>
-                                    <li>Oversaw the entire software development lifecycle, encompassing automated testing and deployment through Heroku.</li>
-                                    <li>Enhanced the performance of several queries, resulting in a significant increase of up to 100 times faster execution time.</li>
-                                </ul>
-                            </div><!--//item-->
-                            
-                            <div class="item">
-                                <h3 class="title">Professor - <span class="place"><a target="_blank" href="http://portal.utfpr.edu.br">Federal Technological University of Parana</a></span> <span class="year">(8/2017 - 7/2019)</span></h3>
-                                <p>Nationally renowned university with 13 campuses.</p>
-                                <ul>
-                                    <li>Planned and delivered IT courses.</li>
-                                    <li>Created hands-on Agile Development course, using Ruby on Rails, GIT/Github, PostgreSQL, Ubuntu, and Bootstrap, resulting in student projects such as classes, blog, and a sales website.</li>
-                                    <li>Taught Project Management Course using PMBOK guidelines to address all 10 areas of PMBOK 5.</li>
-                                    <li>Developed curriculum and delivered Software Development Course, including topics such as quality, testing, and methodologies.</li>
-                                    <li>Educated students in Java Concurrency / Multithreading & Java Socket.</li>
-                                </ul>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title">Staff Software Engineer - <span class="place"><a target="_blank" href="https://www.germantech.com.br/">German Tech Systems</a></span> <span class="year">(1/2016 - 3/2018)</span></h3>
-                                <p>Software company providing business systems support, accounting,
-                                    tax, and stock management.</p>
-                                <ul>
-                                    <li>Implemented process changes that resulted in a 60% reduction in errors. These changes included more efficient code review and internal communication protocols.</li>
-                                    <li>Led meetings with Product Owner and Development Team.</li>
-                                    <li>Orchestrated a knowledge sharing session with the team to elucidate error handling, debugging techniques, and principles of writing clean code. This initiative resulted in a significant reduction of bugs, with a notable 50% decrease.</li>
-                                    <li>A significant 50% improvement in response time was achieved through effective management of the PostgreSQL database. This was accomplished by optimizing memory and buffer parameters.</li>
-                                    <li>Managed Nginx applications and servers on Amazon Web Services (AWS), including EC2 instances and S3 storage.</li>
-                                </ul>
-                            </div><!--//item-->
-                            
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a target="_blank"  href="https://www.germantech.com.br/">German Tech Systems</a></span> <span class="year">(11/2014 - 12/2015)</span></h3>
-                                <ul>
-                                    <li>Reduced required man-hours.</li>
-                                    <li>Reduced memory requirements of tax calculation process (from 1.2 GB to 200 MB) by implementing a pipe processing model.</li>
-                                    <li>System-user interface enhancement through menu reorganization and provision of supplementary feedback messages, including progress bars and error messages.</li>
-                                </ul>
-                            </div><!--//item-->
-
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a target="_blank" href="https://www.oderco.com.br">Oderco</a></span> <span class="year">(4/2014 - 10/2014)</span></h3>
-                                <p>Computer equipment / electronics distributor.</p>
-                                <ul>
-                                    <li>Maximized security, permissions, maintenance, and performance by upgrading all internal support tools in conventional development model in PHP by CakePHP 1.3 framework, as well as Front-end Bootstrap 2.3.2 and jQuery that improved interface and usability in addition to maintenance and performance.</li>
-                                </ul>
-                            </div><!--//item-->
-
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a target="_blank" href="https://www.fag.edu.br/toledo">Assis Gurgacz Foundation</a></span> <span class="year">(12/2009 - 2/2012)</span></h3>
-                                <p>Institute of higher learning with 2,000 students.</p>
-                                <ul>
-                                    <li>Built, maintained, and updated website for the institution.</li>
-                                    <li>Created PHP software programs, such as Reserving, Event Controlling, and Evaluation Systems.</li>
-                                    <li>Developed multiple operations, using Debian, MySQL, Apache, and Postfix.</li>
-                                </ul>
-
-                            </div><!--//item-->
-                            
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-                <section class="github section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">My GitHub</h2>
-
-                        <div id="github-graph" class="github-graph">
-
-                        </div><!--//github-graph-->
-
-                        <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->
-                        <div id="ghfeed" class="ghfeed">
-                        </div><!--//ghfeed-->
-                        
-                    </div><!--//secton-inner-->
-                </section><!--//section-->
-            </div><!--//primary-->
-            <div class="secondary col-lg-4 col-12">
-                 <aside class="info aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading sr-only">Basic Information</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Fort Lauderdale, FL, USA</li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="mailto:lucasarthurpenz@gmail.com">lucasarthurpenz@gmail.com</a></li>
-<!--                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="#">https://www.website.com</a></li>-->
-                            </ul>
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//aside-->
-                
-                <aside class="skills aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Skills</h2>
-                        <div class="content">
-                            <p class="intro">
-
-                            <div class="skillset">
-                               
-                                <div class="item">
-                                    <h3 class="level-title">Ruby On Rails</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="98%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Javascript &amp; jQuery</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="98%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">HTML5, CSS3, SASS &amp; LESS</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="98%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Java</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="96%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Python</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="20%">
-                                        </div>
-                                    </div><!--//level-bar-->
-                                </div><!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">PostgreSQL</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="98%">
-                                        </div>
-                                    </div><!--//level-bar-->
-                                </div><!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Angular</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="46%">
-                                        </div>
-                                    </div><!--//level-bar-->
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Vue</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="90%">
-                                        </div>
-                                    </div><!--//level-bar-->
-                                </div><!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">React</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="80%">
-                                        </div>
-                                    </div><!--//level-bar-->
-                                </div><!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">MongoDB</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="46%">
-                                        </div>
-                                    </div><!--//level-bar-->
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Node</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="50%">
-                                        </div>
-                                    </div><!--//level-bar-->
-                                </div><!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">GO</h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="10%">
-                                        </div>
-                                    </div><!--//level-bar-->
-                                </div><!--//item-->
-
-
-                                
-                                <p><a class="more-link" href="https://www.linkedin.com/in/lucaspenz/"><i class="fas fa-external-link-alt"></i>More on LinkedIn</a></p>
-                            </div>              
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//section-->
-                
-<!--                <aside class="testimonials aside section">-->
-<!--                    <div class="section-inner shadow-sm rounded">-->
-<!--                        <h2 class="heading">Testimonials</h2>-->
-<!--                        <div class="content">-->
-<!--                            <div class="item">-->
-<!--                                <blockquote class="quote">                                  -->
-<!--                                    <p><i class="fas fa-quote-left"></i>James is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!</p>-->
-<!--                                </blockquote>                -->
-<!--                                <p class="source"><span class="name">Tim Adams</span><br /><span class="title">Curabitur commodo</span></p>                                                             -->
-<!--                            </div>&lt;!&ndash;//item&ndash;&gt;-->
-<!--                            -->
-<!--                            <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on Linkedin</a></p> -->
-<!--                            -->
-<!--                        </div>&lt;!&ndash;//content&ndash;&gt;-->
-<!--                    </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-<!--                </aside>&lt;!&ndash;//section&ndash;&gt;-->
-                
-                <aside class="education aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">                      
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> MSc Computer Science</h3>
-                                <h4 class="university">Maharishi International University <span class="year">(2020-2023)</span></h4>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> MBA in Project Management</h3>
-                                <h4 class="university">Getulho Vargas Foundation<span class="year">(2015-2016)</span></h4>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> BSc Information Systems</h3>
-                                <h4 class="university">Assis Gurgacz Foundation<span class="year">(2008-2011)</span></h4>
-                            </div><!--//item-->
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                            
-                <aside class="languages aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Languages</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>English:</strong></span>
-                                    <span class="level">Fluent <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
-                                </li><!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Portuguese:</strong></span>
-                                    <span class="level">Native Speaker <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
-                                </li><!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Spanish:</strong></span>
-                                    <span class="level">Limited Working Proficiency <br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
-                                </li><!--//item-->
-                            </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
-<!--                <aside class="blog aside section">-->
-<!--                    <div class="section-inner shadow-sm rounded">-->
-<!--                        <h2 class="heading">Latest Blog Posts</h2>-->
-<!--                        <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">jQuery RSS plugin</a> to pull in your blog post feeds.</p>-->
-<!--                        <div id="rss-feeds" class="content">-->
-
-<!--                        </div>&lt;!&ndash;//content&ndash;&gt;-->
-<!--                    </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-<!--                </aside>&lt;!&ndash;//section&ndash;&gt;-->
-
-
-                
-
-              
-            </div><!--//secondary-->    
-        </div><!--//row-->
-    </div><!--//masonry-->
+                            </div><!--//content-->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
     
-
- 
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="assets/plugins/popper.min.js"></script> 
