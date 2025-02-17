@@ -18,12 +18,6 @@
     <!-- FontAwesome JS -->
     <script defer src="assets/fontawesome/js/all.js"></script>
     
-    <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css">
-    <!-- github activity css -->    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <link rel="stylesheet" href="assets/plugins/github-activity/github-activity-0.1.5.min.css">
-    
     <!-- Replace existing CSS with Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -268,12 +262,12 @@
                     <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                         <div class="p-6">
                             <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">My GitHub</h2>
-                            <div id="github-graph" class="github-graph">
+                            <div id="github-graph" class="github-graph mb-6">
                             </div><!--//github-graph-->
 
-                            <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->
-                            <div id="ghfeed" class="ghfeed">
-                            </div><!--//ghfeed-->
+                            <div id="ghfeed" class="space-y-4">
+                                <!-- Activity items will be inserted here -->
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -527,12 +521,6 @@
     </div>
 
 
-    <!-- github calendar plugin -->
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-    <!-- github activity plugin -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
-    <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>            
 
     <!-- Add this JavaScript before the closing body tag -->
@@ -566,6 +554,90 @@
                 closeModal();
             }
         });
+    </script>
+
+    <!-- Only needed for GitHub Calendar -->
+    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
+
+    <!-- Initialize GitHub Calendar and Activity -->
+    <script>
+        GitHubCalendar(".github-graph", "lapenz", { responsive: true });
+        
+        // Fetch GitHub activity using the REST API
+        async function fetchGitHubActivity() {
+            try {
+                const response = await fetch('https://api.github.com/users/lapenz/events/public');
+                const events = await response.json();
+                const ghfeed = document.getElementById('ghfeed');
+                
+                events.slice(0, 8).forEach(event => {
+                    let eventHtml = '';
+                    const date = new Date(event.created_at).toLocaleDateString();
+                    
+                    switch(event.type) {
+                        case 'PushEvent':
+                            const commits = event.payload.commits;
+                            eventHtml = `
+                                <div class="border-l-4 border-blue-500 pl-4 py-2">
+                                    <div class="flex items-center gap-2 text-sm text-gray-600 mb-1">
+                                        <i class="fas fa-code-branch"></i>
+                                        <span>Pushed to ${event.repo.name}</span>
+                                        <span class="ml-auto">${date}</span>
+                                    </div>
+                                    ${commits ? `
+                                        <div class="text-sm text-gray-700 pl-4">
+                                            ${commits.map(commit => `
+                                                <div class="flex items-start gap-2">
+                                                    <i class="fas fa-circle text-[6px] mt-2"></i>
+                                                    <span>${commit.message}</span>
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            `;
+                            break;
+                        case 'CreateEvent':
+                            eventHtml = `
+                                <div class="border-l-4 border-green-500 pl-4 py-2">
+                                    <div class="flex items-center gap-2 text-sm text-gray-600">
+                                        <i class="fas fa-plus-circle"></i>
+                                        <span>Created ${event.payload.ref_type} ${event.payload.ref || ''} in ${event.repo.name}</span>
+                                        <span class="ml-auto">${date}</span>
+                                    </div>
+                                </div>
+                            `;
+                            break;
+                        case 'WatchEvent':
+                            eventHtml = `
+                                <div class="border-l-4 border-yellow-500 pl-4 py-2">
+                                    <div class="flex items-center gap-2 text-sm text-gray-600">
+                                        <i class="fas fa-star"></i>
+                                        <span>Starred ${event.repo.name}</span>
+                                        <span class="ml-auto">${date}</span>
+                                    </div>
+                                </div>
+                            `;
+                            break;
+                        // Add more event types as needed
+                    }
+                    
+                    if (eventHtml) {
+                        ghfeed.innerHTML += eventHtml;
+                    }
+                });
+            } catch (error) {
+                console.error('Error fetching GitHub activity:', error);
+                document.getElementById('ghfeed').innerHTML = `
+                    <div class="text-gray-600 text-center py-4">
+                        Unable to load GitHub activity at this time.
+                    </div>
+                `;
+            }
+        }
+
+        // Call the function when the page loads
+        fetchGitHubActivity();
     </script>
 </body>
 </html> 
